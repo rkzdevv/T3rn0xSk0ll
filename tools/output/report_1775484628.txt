@@ -1,0 +1,2 @@
+[+] Scan started for example.html
+Score: 100%

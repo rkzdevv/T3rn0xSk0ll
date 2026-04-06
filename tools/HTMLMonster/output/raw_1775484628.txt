@@ -1,0 +1,13 @@
+[1;36m[+] Scanning keywords...[0m
+[1;36m[+] Checking password fields...[0m
+[1;36m[+] Analyzing comments...[0m
+[1;36m[+] Checking scripts...[0m
+[1;36m[+] Searching admin paths...[0m
+[1;36m[+] Checking forms...[0m
+[1;36m[+] Searching tokens/secrets...[0m
+[1;36m[+] Searching emails...[0m
+
+[1;36mSecurity Score: 100%[0m
+
+[1;32m[+] Scan completed[0m
+[1;32m[+] Report saved: ../output/report_1775484628.txt[0m

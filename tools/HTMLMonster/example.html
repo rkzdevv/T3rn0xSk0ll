@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTMLMonster Vulnerable Page</title>
+</head>
+
+<body>
+
+<h1>HTMLMonster Test Page</h1>
+
+<!-- ============================= -->
+<!-- 1. XSS (Cross-Site Scripting) -->
+<!-- ============================= -->
+<h2>XSS Test</h2>
+<input type="text" id="xssInput" placeholder="Type something...">
+<button onclick="runXSS()">Submit</button>
+
+<div id="output"></div>
+
+<script>
+function runXSS() {
+    let input = document.getElementById("xssInput").value;
+    document.getElementById("output").innerHTML = input; // VULNERÁVEL
+}
+</script>
+
+<!-- ============================= -->
+<!-- 2. Inline JS Injection -->
+<!-- ============================= -->
+<h2>Inline JS</h2>
+<a href="javascript:alert('Injected!')">Click me</a>
+
+<!-- ============================= -->
+<!-- 3. Exposed Sensitive Info -->
+<!-- ============================= -->
+<h2>Hidden Info</h2>
+<!-- API_KEY = 12345-SECRET-KEY -->
+<!-- PASSWORD = admin123 -->
+
+<!-- ============================= -->
+<!-- 4. Insecure Form (no method) -->
+<!-- ============================= -->
+<h2>Login Form</h2>
+<form action="login.php">
+    Username: <input type="text" name="user"><br>
+    Password: <input type="password" name="pass"><br>
+    <input type="submit">
+</form>
+
+<!-- ============================= -->
+<!-- 5. GET Sensitive Data -->
+<!-- ============================= -->
+<h2>GET Leak</h2>
+<a href="login.php?user=admin&pass=1234">Login via GET</a>
+
+<!-- ============================= -->
+<!-- 6. External Script (no integrity) -->
+<!-- ============================= -->
+<h2>External Script</h2>
+<script src="https://example.com/script.js"></script>
+
+<!-- ============================= -->
+<!-- 7. Open Redirect -->
+<!-- ============================= -->
+<h2>Redirect</h2>
+<a href="redirect.php?url=https://evil.com">Go somewhere</a>
+
+<!-- ============================= -->
+<!-- 8. Clickjacking (no protection) -->
+<!-- ============================= -->
+<h2>Clickjacking Test</h2>
+<iframe src="https://example.com" width="300" height="200"></iframe>
+
+<!-- ============================= -->
+<!-- 9. Weak Input Validation -->
+<!-- ============================= -->
+<h2>Weak Input</h2>
+<form>
+    Age: <input type="text" name="age">
+    <input type="submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+===================================
+        HTMLMonster Report          
+===================================
+
+Summary:
+CRITICAL: 
+WARNING : 
+INFO    : 
+
+Risk Level: LOW RISK
+Security Score: 100%
+
+========== CRITICAL ==========
+
+========== WARNING ==========
+
+========== INFO ==========
+
